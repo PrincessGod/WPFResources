@@ -1,0 +1,73 @@
+﻿<Window x:Class="WpfApplication2.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Window1" Height="680" Width="1000" WindowStyle="None" AllowsTransparency="True"
+        xmlns:system="clr-namespace:System;assembly=mscorlib"       
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal" 
+        TextOptions.TextRenderingMode="Auto"        
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}" >
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Dark.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.Cyan.xaml" />
+
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Accent/MaterialDesignColor.Lime.xaml" />
+
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.PopupBox.xaml" />
+
+                <!-- throw in some extra colour for our floating action button -->
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/MaterialDesignColor.Green.Named.Primary.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <materialDesign:Card materialDesign:ShadowAssist.ShadowDepth="Depth5" Background="Black" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" >
+
+
+
+        <StackPanel Margin="1,1,1,1" Background="{DynamicResource MaterialDesignPaper}">
+
+            <materialDesign:ColorZone MouseMove="TitleBar_MouseMove" MouseDown="TitleBar_MouseDown" Padding="24,10,16,10" materialDesign:ShadowAssist.ShadowDepth="Depth1"
+                                            Mode="Standard">
+                <DockPanel  >
+                    <Button Click="ExitButton_Click" DockPanel.Dock="Right" Padding="10,0,10,0" Style="{StaticResource MaterialDesignFlatButton}" Loaded="Button_Loaded">
+                        <materialDesign:PackIcon Kind="Close" Height="24" Width="24" />
+                    </Button>
+                    <Button Click="btn_max_Click" DockPanel.Dock="Right" Padding="10,0,10,0" Style="{StaticResource MaterialDesignFlatButton}">
+                        <materialDesign:PackIcon Kind="WindowMaximize" Height="24" Width="24" />
+                    </Button>
+                    <Button Click="btn_min_Click" DockPanel.Dock="Right" Padding="10,0,10,0" Style="{StaticResource MaterialDesignFlatButton}">
+                        <materialDesign:PackIcon Kind="WindowMinimize" Height="24" Width="24" />
+                    </Button>
+                    <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="22">Material Design In XAML Toolkit</TextBlock>
+                    
+                </DockPanel>
+                
+            </materialDesign:ColorZone>
+
+            <Grid Margin="8 0 8 0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="55"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid >
+                    <materialDesign:PackIcon Kind="Information" Margin="24 0 0 2" Width="20" Height="20" VerticalAlignment="Center" />
+                    <TextBlock HorizontalAlignment="Left" Padding="0" VerticalAlignment="Center" Margin="54,0,0,0"  FontSize="14" Grid.Row="1">说明文字 在这里写这一页的相关描述信息</TextBlock>
+                    <Border Margin="-8,0,-8,1" BorderThickness="0 1 0 0" VerticalAlignment="Bottom" BorderBrush="{DynamicResource MaterialDesignDivider}" Grid.Row="1"/>
+                </Grid>
+                <Grid Margin="0,2,0,0" Grid.Row="1">
+
+                </Grid>
+            </Grid>
+
+        </StackPanel>
+      
+
+    </materialDesign:Card>
+</Window>

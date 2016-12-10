@@ -1,0 +1,16 @@
+E:\WpfApplication1\bin\Debug\VIPTargetTable.exe.config
+E:\WpfApplication1\bin\Debug\VIPTargetTable.exe
+E:\WpfApplication1\bin\Debug\VIPTargetTable.pdb
+E:\WpfApplication1\bin\Debug\WPF.Themes.dll
+E:\WpfApplication1\bin\Debug\WPF.Themes.pdb
+E:\WpfApplication1\obj\Debug\VIPTargetTable.csprojResolveAssemblyReference.cache
+E:\WpfApplication1\obj\Debug\MainWindow.baml
+E:\WpfApplication1\obj\Debug\MainWindow.g.cs
+E:\WpfApplication1\obj\Debug\App.g.cs
+E:\WpfApplication1\obj\Debug\VIPTargetTable_MarkupCompile.cache
+E:\WpfApplication1\obj\Debug\VIPTargetTable.g.resources
+E:\WpfApplication1\obj\Debug\VIPTargetTable.Properties.Resources.resources
+E:\WpfApplication1\obj\Debug\VIPTargetTable.csproj.GenerateResource.Cache
+E:\WpfApplication1\obj\Debug\VIPTargetTable.exe
+E:\WpfApplication1\obj\Debug\VIPTargetTable.pdb
+E:\WpfApplication1\bin\Debug\BlendDark\ico_feather.png
