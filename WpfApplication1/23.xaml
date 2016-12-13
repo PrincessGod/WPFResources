@@ -1,0 +1,33 @@
+﻿<Window x:Class="WpfApplication1.ee"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Background="{DynamicResource WindowBackgroundBrush}"
+        Title="MainWindow" Height="400" Width="730">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/WPF.Themes;component/BlendDark/Theme.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>        
+    </Window.Resources>
+    
+    <Grid>
+        <DataGrid x:Name="dataGrid" AlternationCount="2" x:FieldModifier="public" ItemsSource="{Binding Mode=OneWay}" AutoGenerateColumns="False" CanUserAddRows="False" IsReadOnly="True">          
+            <DataGrid.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="删除选中项" Click="delete_click"/>
+                </ContextMenu>
+            </DataGrid.ContextMenu>
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="国名" ElementStyle="{StaticResource CenterAlignmentStyle}" Width="100" Binding="{Binding co}"/>
+                <DataGridTextColumn Header="航向" ElementStyle="{StaticResource CenterAlignmentStyle}" Width="80" Binding="{Binding di,Mode=TwoWay}"/>
+                <DataGridTextColumn Header="船艏向" ElementStyle="{StaticResource CenterAlignmentStyle}" Width="80" Binding="{Binding he,Mode=TwoWay}"/>
+                <DataGridTextColumn Header="信息来源" ElementStyle="{StaticResource CenterAlignmentStyle}" Width="80" Binding="{Binding ms,Mode=TwoWay}"/>
+                <DataGridTextColumn Header="信息类型" ElementStyle="{StaticResource CenterAlignmentStyle}" Width="80" Binding="{Binding mt,Mode=TwoWay}"/>
+                <DataGridTextColumn Header="目标编号" ElementStyle="{StaticResource CenterAlignmentStyle}" Width="100" Binding="{Binding nu,Mode=TwoWay}"/>
+                <DataGridTextColumn Header="船名" ElementStyle="{StaticResource CenterAlignmentStyle}" Width="100" Binding="{Binding sn,Mode=TwoWay}"/>
+                <DataGridTextColumn Header="船舶类型" ElementStyle="{StaticResource CenterAlignmentStyle}" Width="*" Binding="{Binding st,Mode=TwoWay}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>

@@ -61,9 +61,30 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="frmMuitiTargetPlayback.xaml.cs">
+      <DependentUpon>frmMuitiTargetPlayback.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmSelectRegionMode.xaml.cs">
+      <DependentUpon>frmSelectRegionMode.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmSingleTargetPlayback.xaml.cs">
+      <DependentUpon>frmSingleTargetPlayback.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Window1.xaml.cs">
       <DependentUpon>Window1.xaml</DependentUpon>
     </Compile>
+    <Page Include="frmMuitiTargetPlayback.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="frmSelectRegionMode.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="frmSingleTargetPlayback.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

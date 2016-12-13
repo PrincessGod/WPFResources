@@ -2,32 +2,31 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Background="{DynamicResource WindowBackgroundBrush}"
-        Title="MainWindow" Height="400" Width="730">
+        Title="重点目标" Height="400" Width="730" WindowStyle="None" AllowsTransparency="True" Opacity=".7" Loaded="Window_Loaded">
     <Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="/WPF.Themes;component/BlendDark/Theme.xaml" />
             </ResourceDictionary.MergedDictionaries>
-        </ResourceDictionary>        
+        </ResourceDictionary>
+        
     </Window.Resources>
-    
+
     <Grid>
-        <DataGrid x:Name="dataGrid" AlternationCount="2" x:FieldModifier="public" ItemsSource="{Binding Mode=OneWay}" AutoGenerateColumns="False" CanUserAddRows="False" IsReadOnly="True">          
-            <DataGrid.ContextMenu>
-                <ContextMenu>
-                    <MenuItem Header="删除选中项" Click="delete_click"/>
-                </ContextMenu>
-            </DataGrid.ContextMenu>
-            <DataGrid.Columns>
-                <DataGridTextColumn Header="国名" ElementStyle="{StaticResource CenterAlignmentStyle}" Width="100" Binding="{Binding co}"/>
-                <DataGridTextColumn Header="航向" ElementStyle="{StaticResource CenterAlignmentStyle}" Width="80" Binding="{Binding di,Mode=TwoWay}"/>
-                <DataGridTextColumn Header="船艏向" ElementStyle="{StaticResource CenterAlignmentStyle}" Width="80" Binding="{Binding he,Mode=TwoWay}"/>
-                <DataGridTextColumn Header="信息来源" ElementStyle="{StaticResource CenterAlignmentStyle}" Width="80" Binding="{Binding ms,Mode=TwoWay}"/>
-                <DataGridTextColumn Header="信息类型" ElementStyle="{StaticResource CenterAlignmentStyle}" Width="80" Binding="{Binding mt,Mode=TwoWay}"/>
-                <DataGridTextColumn Header="目标编号" ElementStyle="{StaticResource CenterAlignmentStyle}" Width="100" Binding="{Binding nu,Mode=TwoWay}"/>
-                <DataGridTextColumn Header="船名" ElementStyle="{StaticResource CenterAlignmentStyle}" Width="100" Binding="{Binding sn,Mode=TwoWay}"/>
-                <DataGridTextColumn Header="船舶类型" ElementStyle="{StaticResource CenterAlignmentStyle}" Width="*" Binding="{Binding st,Mode=TwoWay}"/>
-            </DataGrid.Columns>
-        </DataGrid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0"  Background="{DynamicResource ButtonBackground}" MouseMove="TitleBar_MouseMove" MouseDown="TitleBar_MouseDown">
+            <Label Content="重要目标" VerticalAlignment="Center" HorizontalAlignment="Stretch"  Margin="10,0,0,0" FontSize="16" />
+            <Button VerticalAlignment="Top" VerticalContentAlignment="Center" BorderThickness="0"  HorizontalContentAlignment="Center"  FontSize="24" Width="30" Content="×" HorizontalAlignment="Right" Click="ExitButton_Click" Height="40" Margin="0,-6,0,0"/>
+            <Button VerticalContentAlignment="Center"  HorizontalContentAlignment="Center" BorderThickness="0"  FontSize="21" Width="30"  HorizontalAlignment="Right" Content="□" Click="btn_max_Click" Height="40" Margin="0,-6,30,0"/>
+            <Button VerticalAlignment="Top" VerticalContentAlignment="Center" BorderThickness="0" ContentStringFormat="&#xe69a;"  Content="-" HorizontalContentAlignment="Center"  FontSize="31" Width="30"  HorizontalAlignment="Right" Click="btn_min_Click" Height="40" Margin="0,-6,60,0">
+            </Button>
+        </Grid>
+        <Grid Grid.Row="1">
+            
+        </Grid>
     </Grid>
 </Window>

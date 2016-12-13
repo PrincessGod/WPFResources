@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -12,28 +11,38 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+ 
 
-namespace WpfApplication2
+namespace WpfApplication1
 {
     /// <summary>
     /// Window1.xaml 的交互逻辑
     /// </summary>
-    public partial class Window1 : Window
+    public partial class frmSelectRegionMode : Window
     {
-        public Window1()
+        public frmSelectRegionMode()
         {
             InitializeComponent();
-
-            Task.Factory.StartNew(() =>
-            {
-                Thread.Sleep(2500);
-            }).ContinueWith(t =>
-            {
-                //note you can use the message queue from any thread, but just for the demo here we 
-                //need to get the message queue from the snackbar, so need to be on the dispatcher
-                MainSnackbar.MessageQueue.Enqueue("Welcome to Material Design In XAML Tookit");
-            }, TaskScheduler.FromCurrentSynchronizationContext());
         }
+
+
+
+        private void bntrectangle_Click(object sender, RoutedEventArgs e)
+        {
+
+ 
+        }
+
+        private void bntcircle_Click(object sender, RoutedEventArgs e)
+        {
+ 
+        }
+
+        private void bntpolygon_Click(object sender, RoutedEventArgs e)
+        {
+ 
+        }
+
 
         #region 窗口标题栏
         /// <summary>
@@ -45,7 +54,9 @@ namespace WpfApplication2
         {
             if (e.LeftButton == MouseButtonState.Pressed)
             {
+                this.Opacity = .2;
                 this.DragMove();
+                this.Opacity = 1;
             }
         }
 

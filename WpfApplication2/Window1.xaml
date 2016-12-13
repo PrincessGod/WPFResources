@@ -27,7 +27,8 @@
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Window.Resources>
-    <materialDesign:Card materialDesign:ShadowAssist.ShadowDepth="Depth5" Background="Black" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" >
+    <Grid Background="Black">
+    <!--<materialDesign:Card materialDesign:ShadowAssist.ShadowDepth="Depth5" Background="Black" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" >-->
 
 
 
@@ -46,9 +47,9 @@
                         <materialDesign:PackIcon Kind="WindowMinimize" Height="24" Width="24" />
                     </Button>
                     <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="22">Material Design In XAML Toolkit</TextBlock>
-                    
+
                 </DockPanel>
-                
+
             </materialDesign:ColorZone>
 
             <Grid Margin="8 0 8 0">
@@ -62,12 +63,145 @@
                     <Border Margin="-8,0,-8,1" BorderThickness="0 1 0 0" VerticalAlignment="Bottom" BorderBrush="{DynamicResource MaterialDesignDivider}" Grid.Row="1"/>
                 </Grid>
                 <Grid Margin="0,2,0,0" Grid.Row="1">
+                    <materialDesign:Transitioner SelectedIndex="0" >
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Horizontal"  >
 
+                                <Button   FontSize="16" IsEnabled="False" Style="{StaticResource MaterialDesignFlatButton}">
+                                    <StackPanel Orientation="Horizontal">
+                                        <materialDesign:PackIcon Kind="AvTimer"  Width="17" Height="17"/>
+                                        <TextBlock Margin="6 0 0 0" >实时船舶数量</TextBlock>
+                                    </StackPanel>
+                                </Button>
+
+                                <Button Style="{StaticResource MaterialDesignFlatButton}" FontSize="16" Command="{x:Static materialDesign:Transitioner.MoveNextCommand}">
+                                    <StackPanel Orientation="Horizontal">
+                                        <materialDesign:PackIcon Kind="Timetable" Width="17" Height="17"/>
+                                        <TextBlock Margin="6 0 0 0">历史进出统计</TextBlock>
+                                    </StackPanel>
+                                </Button>
+                            </StackPanel>
+                            <Grid Grid.Row="1">
+                                <StackPanel>
+                                    <Border Margin="0" BorderThickness="0 1 0 0" VerticalAlignment="Top" BorderBrush="{DynamicResource MaterialDesignDivider}"/>
+                                    <TextBlock Margin="0 32 0 24" Style="{StaticResource MaterialDesignHeadlineTextBlock}">实时船舶统计</TextBlock>
+                                    <ListBox VerticalAlignment="Center"  VerticalContentAlignment="Center" Style="{StaticResource MaterialDesignToolToggleFlatListBox}" SelectedIndex="0">
+                                        <ListBoxItem>
+                                            <StackPanel Orientation="Horizontal" Margin="0 2 0 0">
+                                                <materialDesign:PackIcon Kind="FileChart" Width="15" Height="15"/>
+                                                <TextBlock Margin="2 0 0 0" FontSize="14">数量统计</TextBlock>
+                                            </StackPanel>
+                                        </ListBoxItem>
+                                        <ListBoxItem>
+                                            <StackPanel Orientation="Horizontal" Margin="0 2 0 0">
+                                                <materialDesign:PackIcon Kind="FormatListNumbers" Width="16" Height="16"/>
+                                                <TextBlock Margin="2 0 0 0" FontSize="14">目标列表</TextBlock>
+                                            </StackPanel>
+                                        </ListBoxItem>
+
+                                    </ListBox>
+
+                                </StackPanel>
+                            </Grid>
+                        </Grid>
+
+                        <!-- you can control (and create your own) wipes -->
+                        <materialDesign:TransitionerSlide>
+                            <materialDesign:TransitionerSlide.BackwardWipe>
+                                <materialDesign:CircleWipe />
+                            </materialDesign:TransitionerSlide.BackwardWipe>
+                            <Grid>
+                                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center"  Orientation="Horizontal">
+                                    <Button Margin="0"  FontSize="16" Style="{StaticResource MaterialDesignFlatButton}" Command="{x:Static materialDesign:Transitioner.MovePreviousCommand}">
+                                        <StackPanel Orientation="Horizontal">
+                                            <materialDesign:PackIcon Kind="AvTimer"  Width="17" Height="17"/>
+                                            <TextBlock Margin="6 0 0 0">实时船舶数量</TextBlock>
+                                        </StackPanel>
+                                    </Button>
+                                    <Button FontSize="16"  Style="{StaticResource MaterialDesignFlatButton}">
+                                        <StackPanel Orientation="Horizontal">
+                                            <materialDesign:PackIcon Kind="Timetable"  Width="17" Height="17"/>
+                                            <TextBlock Margin="6 0 0 0">历史进出统计</TextBlock>
+                                        </StackPanel>
+                                    </Button>
+                                </StackPanel>
+                            </Grid>
+                        </materialDesign:TransitionerSlide>
+                        
+                    </materialDesign:Transitioner>
+                    <!--<Grid.RowDefinitions>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="11*"/>
+                    </Grid.RowDefinitions>-->
+
+
+                    <!-- the transitioner will manage your transitions. notice how SelectedIndex is set to zero: the first slide (instead of the default of -1) -->
+                    <!--<materialDesign:Transitioner SelectedIndex="0" Grid.Row="1">
+                        <materialDesign:ColorZone Mode="Light" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                            <Grid>
+                                <Button Style="{DynamicResource MaterialDesignFloatingActionButton}" Margin="64"
+                Command="{x:Static materialDesign:Transitioner.MoveNextCommand}">
+                                    <materialDesign:PackIcon Kind="Pill" />
+                                </Button>
+                                <Label VerticalAlignment="Center" HorizontalAlignment="Center">123123127381723</Label>
+                            </Grid>
+                        </materialDesign:ColorZone>
+                        --><!-- you can use a slide for each page, let's add a touch of fade for our first page  --><!--
+                        <materialDesign:TransitionerSlide OpeningEffect="{materialDesign:TransitionEffect FadeIn}">
+                            
+                        </materialDesign:TransitionerSlide>-->
+
+                        <!-- but you can use bare xaml too --><!--
+                <materialDesign:ColorZone Mode="Light" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                            <Grid>
+                            <Button Style="{DynamicResource MaterialDesignFloatingActionButton}" Margin="0"
+                Command="{x:Static materialDesign:Transitioner.MoveNextCommand}">
+                                <materialDesign:PackIcon Kind="Pill" />
+                            </Button>
+                            </Grid>
+                        </materialDesign:ColorZone>
+
+                --><!-- you can control (and create your own) wipes --><!--
+                        <materialDesign:TransitionerSlide>
+                            <materialDesign:TransitionerSlide.BackwardWipe>
+                                <materialDesign:CircleWipe />
+                            </materialDesign:TransitionerSlide.BackwardWipe>
+                            <materialDesign:ColorZone Mode="Light" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                                
+                                <Grid>
+                                    <Label>123123127381723</Label>
+                                    <Button Style="{DynamicResource MaterialDesignFloatingActionButton}" Margin="0"
+                Command="{x:Static materialDesign:Transitioner.MoveNextCommand}">
+                                        <materialDesign:PackIcon Kind="Pill" />
+                                    </Button>
+                                </Grid>
+                            </materialDesign:ColorZone>
+                        </materialDesign:TransitionerSlide>
+
+                        --><!-- now we are going to slide this in by combining some extra effects.  the inner content slides in, so we'll set the outer background and clip, to keep things nice --><!--
+                        <materialDesign:TransitionerSlide Background="{DynamicResource MaterialDesignDarkBackground}"
+                                              Foreground="{DynamicResource MaterialDesignDarkForeground}"
+                                              ClipToBounds="True">
+                            <materialDesign:TransitionerSlide.OpeningEffects>
+                                <materialDesign:TransitionEffect Kind="SlideInFromLeft" Duration="0:0:0.8" />
+                                <materialDesign:TransitionEffect Kind="SlideInFromBottom" Duration="0:0:0.8" OffsetTime="0:0:0.15" />
+                            </materialDesign:TransitionerSlide.OpeningEffects>
+                            <Label>123123127381723</Label>
+                        </materialDesign:TransitionerSlide>
+
+                    </materialDesign:Transitioner>-->
+                    <materialDesign:Snackbar MessageQueue="{materialDesign:MessageQueue}" x:Name="MainSnackbar"
+                                             Grid.Row="1" />
                 </Grid>
             </Grid>
 
         </StackPanel>
-      
 
-    </materialDesign:Card>
+
+    <!--</materialDesign:Card>-->
+    </Grid>
 </Window>

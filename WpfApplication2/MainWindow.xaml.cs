@@ -14,6 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WpfApplication1;
 
 namespace WpfApplication2
 {
@@ -88,8 +89,18 @@ namespace WpfApplication2
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            Window1 w = new Window1();
-            w.Show();
+            //Window1 w = new Window1();
+            //w.Show();
+
+            frmSingleTargetPlayback x = new frmSingleTargetPlayback();
+            x.Show();
+
+            frmMuitiTargetPlayback y = new frmMuitiTargetPlayback();
+            
+            y.Show();
+
+            frmSelectRegionMode z = new frmSelectRegionMode();
+            z.Show();
         }
     }
 }
