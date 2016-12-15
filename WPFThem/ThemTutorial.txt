@@ -1,1 +1,5 @@
+a blog have a wpf theme and some tutorial
 http://www.cnblogs.com/AaronYang/p/4710428.html
+
+blog with lot of wpf control tutorial
+https://www.mgenware.com/blog/?p=2296

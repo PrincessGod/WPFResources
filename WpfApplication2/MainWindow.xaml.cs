@@ -92,15 +92,18 @@ namespace WpfApplication2
             //Window1 w = new Window1();
             //w.Show();
 
-            frmSingleTargetPlayback x = new frmSingleTargetPlayback();
-            x.Show();
+            //frmSingleTargetPlayback x = new frmSingleTargetPlayback();
+            //x.Show();
 
-            frmMuitiTargetPlayback y = new frmMuitiTargetPlayback();
+            //frmMuitiTargetPlayback y = new frmMuitiTargetPlayback();
             
-            y.Show();
+            //y.Show();
 
-            frmSelectRegionMode z = new frmSelectRegionMode();
-            z.Show();
+            //frmSelectRegionMode z = new frmSelectRegionMode();
+            //z.Show();
+
+            frmDigAnalysis a = new frmDigAnalysis();
+            a.Show();
         }
     }
 }
