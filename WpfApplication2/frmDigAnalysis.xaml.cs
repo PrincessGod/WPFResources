@@ -96,52 +96,64 @@ namespace WpfApplication1
 
         #endregion
  
-        private void buton_ToggleClick(object sender, RoutedEventArgs e)
-        {
-            if ((sender as ToggleButton).IsChecked == true)
-            {
-                BottomText.Visibility = System.Windows.Visibility.Visible;
-            }
-            else if ((sender as ToggleButton).IsChecked == false)
-            {
-                BottomText.Visibility = System.Windows.Visibility.Collapsed;
-            }
-        }
 
-        private void buton_ToggleClick2(object sender, RoutedEventArgs e)
-        {
-            if ((sender as ToggleButton).IsChecked == true)
-            {
-                BottomText2.Visibility = System.Windows.Visibility.Visible;
-            }
-            else if ((sender as ToggleButton).IsChecked == false)
-            {
-                BottomText2.Visibility = System.Windows.Visibility.Collapsed;
-            }
-
-
-        }
-
-        private void buton_ToggleClick3(object sender, RoutedEventArgs e)
-        {
-            if ((sender as ToggleButton).IsChecked == true)
-            {
-                BottomText3.Visibility = System.Windows.Visibility.Visible;
-            }
-            else if ((sender as ToggleButton).IsChecked == false)
-            {
-                BottomText3.Visibility = System.Windows.Visibility.Collapsed;
-            }
-        }
 
         private void buton_ToggleClick4(object sender, RoutedEventArgs e)
         {
 
         }
 
-        private void buton_ToggleClick5(object sender, RoutedEventArgs e)
-        {
 
+        private void btn1_check(object sender, RoutedEventArgs e)
+        {
+            btn2.IsChecked = false;
+            btn3.IsChecked = false;
+            btn5.IsChecked = false;
+            BottomText.Visibility = System.Windows.Visibility.Visible;
+        }
+
+        private void btn1_uncheck(object sender, RoutedEventArgs e)
+        {
+            BottomText.Visibility = System.Windows.Visibility.Collapsed;
+        }
+
+        private void btn2_check(object sender, RoutedEventArgs e)
+        {
+            btn1.IsChecked = false;
+            btn3.IsChecked = false;
+            btn5.IsChecked = false;
+            BottomText2.Visibility = System.Windows.Visibility.Visible;
+        }
+
+        private void btn2_uncheck(object sender, RoutedEventArgs e)
+        {
+            BottomText2.Visibility = System.Windows.Visibility.Collapsed;
+        }
+
+        private void btn3_check(object sender, RoutedEventArgs e)
+        {
+            btn2.IsChecked = false;
+            btn1.IsChecked = false;
+            btn5.IsChecked = false;
+            BottomText3.Visibility = System.Windows.Visibility.Visible;
+        }
+
+        private void btn3_uncheck(object sender, RoutedEventArgs e)
+        {
+            BottomText3.Visibility = System.Windows.Visibility.Collapsed;
+        }
+
+        private void btn5_check(object sender, RoutedEventArgs e)
+        {
+            btn2.IsChecked = false;
+            btn3.IsChecked = false;
+            btn1.IsChecked = false;
+ 
+        }
+
+        private void btn5_uncheck(object sender, RoutedEventArgs e)
+        {
+ 
         }
     }
 }

@@ -59,7 +59,7 @@
                         <Expander IsExpanded="True" Header="交通模式">
                             <StackPanel  TextBlock.Foreground="{DynamicResource MaterialDesignBody}" Margin="24,8,24,16">
 
-                                <ToggleButton Click="buton_ToggleClick" Width="100" Height="auto" Style="{StaticResource MaterialDesignFlatToggleButton}"  >
+                                <ToggleButton x:Name="btn1" HorizontalAlignment="Left" Margin="0 6 0 2"  Checked="btn1_check" Unchecked="btn1_uncheck" Width="100" Height="auto" Style="{StaticResource MaterialDesignFlatToggleButton}"  >
                                     <ToggleButton.Content>
                                         <StackPanel Orientation="Horizontal" Margin="0 4 0 4" VerticalAlignment="Center">
                                             <TextBlock FontSize="14" >密度分布</TextBlock>
@@ -68,11 +68,11 @@
 
                                 </ToggleButton>
                                 <StackPanel Visibility="Collapsed" x:Name="BottomText">
-                                    <DatePicker Width="100" x:Name="StartDate" Language="zh-CN" VerticalAlignment="Center" Margin="0 15 0 0" materialDesign:HintAssist.Hint="起始日期" Style="{StaticResource MaterialDesignFloatingHintDatePicker}" />
+                                    <DatePicker Width="100" x:Name="StartDate" Language="zh-CN" VerticalAlignment="Center" Margin="0 15 0 0" materialDesign:HintAssist.Hint="日期" Style="{StaticResource MaterialDesignFloatingHintDatePicker}" />
                                     <materialDesign:TimePicker Is24Hours="True" x:Name="StartTime"  SelectedTimeFormat="Long" VerticalAlignment="Center"  Width="100" HorizontalAlignment="Center" Margin="0 0 0 0" materialDesign:HintAssist.Hint="时间"/>
                                 </StackPanel>
 
-                                <ToggleButton Click="buton_ToggleClick2" Width="100" Height="auto" Style="{StaticResource MaterialDesignFlatToggleButton}"  >
+                                <ToggleButton  x:Name="btn2" HorizontalAlignment="Left" Margin="0 6 0 2" Checked="btn2_check" Unchecked="btn2_uncheck" Width="100" Height="auto" Style="{StaticResource MaterialDesignFlatToggleButton}"  >
                                     <ToggleButton.Content>
                                         <StackPanel Orientation="Horizontal" Margin="0 4 0 4" VerticalAlignment="Center">
                                             <TextBlock FontSize="14" >流量分布</TextBlock>
@@ -81,11 +81,11 @@
 
                                 </ToggleButton>
                                 <StackPanel Visibility="Collapsed" x:Name="BottomText2">
-                                    <DatePicker Width="100" x:Name="StartDate2" Language="zh-CN" VerticalAlignment="Center" Margin="0 15 0 0" materialDesign:HintAssist.Hint="起始日期" Style="{StaticResource MaterialDesignFloatingHintDatePicker}" />
+                                    <DatePicker Width="100" x:Name="StartDate2" Language="zh-CN" VerticalAlignment="Center" Margin="0 15 0 0" materialDesign:HintAssist.Hint="日期" Style="{StaticResource MaterialDesignFloatingHintDatePicker}" />
                                     <materialDesign:TimePicker Is24Hours="True" x:Name="StartTime2"  SelectedTimeFormat="Long" VerticalAlignment="Center"  Width="100" HorizontalAlignment="Center" Margin="0 0 0 0" materialDesign:HintAssist.Hint="时间"/>
                                 </StackPanel>
 
-                                <ToggleButton Click="buton_ToggleClick3" Width="100" Height="auto" Style="{StaticResource MaterialDesignFlatToggleButton}"  >
+                                <ToggleButton  x:Name="btn3" HorizontalAlignment="Left" Margin="0 6 0 2"  Checked="btn3_check" Unchecked="btn3_uncheck" Width="100" Height="auto" Style="{StaticResource MaterialDesignFlatToggleButton}"  >
                                     <ToggleButton.Content>
                                         <StackPanel Orientation="Horizontal" Margin="0 4 0 4" VerticalAlignment="Center">
                                             <TextBlock FontSize="14" >失事分布</TextBlock>
@@ -94,22 +94,22 @@
 
                                 </ToggleButton>
                                 <StackPanel Visibility="Collapsed" x:Name="BottomText3">
-                                    <DatePicker Width="100" x:Name="StartDate3" Language="zh-CN" VerticalAlignment="Center" Margin="0 15 0 0" materialDesign:HintAssist.Hint="起始日期" Style="{StaticResource MaterialDesignFloatingHintDatePicker}" />
+                                    <DatePicker Width="100" x:Name="StartDate3" Language="zh-CN" VerticalAlignment="Center" Margin="0 15 0 0" materialDesign:HintAssist.Hint="日期" Style="{StaticResource MaterialDesignFloatingHintDatePicker}" />
                                     <materialDesign:TimePicker Is24Hours="True" x:Name="StartTime3"  SelectedTimeFormat="Long" VerticalAlignment="Center"  Width="100" HorizontalAlignment="Center" Margin="0 0 0 0" materialDesign:HintAssist.Hint="时间"/>
                                 </StackPanel>
                             </StackPanel>
 
                         </Expander>
                         <Expander IsExpanded="True" Header="预测评估">
-                            <StackPanel  TextBlock.Foreground="{DynamicResource MaterialDesignBody}" Margin="24,8,24,16">
-                                <ToggleButton Click="buton_ToggleClick4" Width="100" Height="auto" Style="{StaticResource MaterialDesignFlatToggleButton}"  >
+                            <StackPanel  TextBlock.Foreground="{DynamicResource MaterialDesignBody}" Margin="20,8,24,16">
+                                <ToggleButton HorizontalAlignment="Left" Margin="0 6 0 2"   Click="buton_ToggleClick4" Width="100" Height="auto" Style="{StaticResource MaterialDesignFlatToggleButton}"  >
                                     <ToggleButton.Content>
                                         <StackPanel Orientation="Horizontal" Margin="0 4 0 4" VerticalAlignment="Center">
                                             <TextBlock FontSize="14" >活动预测</TextBlock>
                                         </StackPanel>
                                     </ToggleButton.Content>
                                 </ToggleButton>
-                                <ToggleButton Click="buton_ToggleClick5" Width="100" Height="auto" Style="{StaticResource MaterialDesignFlatToggleButton}"  >
+                                <ToggleButton  HorizontalAlignment="Left" Margin="0 6 0 2"   x:Name="btn5" Checked="btn5_check" Unchecked="btn5_uncheck" Width="100" Height="auto" Style="{StaticResource MaterialDesignFlatToggleButton}"  >
                                     <ToggleButton.Content>
                                         <StackPanel Orientation="Horizontal" Margin="0 4 0 4" VerticalAlignment="Center">
                                             <TextBlock FontSize="14" >风险评估</TextBlock>
