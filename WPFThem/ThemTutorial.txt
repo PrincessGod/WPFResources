@@ -3,3 +3,6 @@ http://www.cnblogs.com/AaronYang/p/4710428.html
 
 blog with lot of wpf control tutorial
 https://www.mgenware.com/blog/?p=2296
+
+a wpf animation and costum control blog
+http://www.cnblogs.com/tsliwei/p/5730326.html
